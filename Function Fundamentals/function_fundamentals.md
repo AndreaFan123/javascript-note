@@ -1,11 +1,11 @@
-Table of contents:
+## Table of contents:
 
 - [Function Declaration vs. Function Expression](#function-declaration--function-statement-函式宣告--函式陳述式)
 - [Local Variables vs. Outer Variables](#local-variables-局部變數-vs-outer-variables-全域變數)
 - [Parameters vs. Arguments](#paremeters-vs-arguments-參數-vs-引數)
 - [函式命名的規範](#函式命名的規範)
 
-# Function Declaration / Function Statement vs. Function Expression vs. Arrow functions 函式陳述式 vs. 函式表達式
+# Function Declaration / Function Statement vs. Function Expression (函式陳述式 vs. 函式表達式)
 
 ## 觀念釐清：
 
@@ -141,7 +141,7 @@ alert(user); // Ben ---C
 
 > 只有在沒有局部變數時，函式才會調用全域變數，建議減少全域變數，盡可能在函式內定義局部變數。
 
-# Paremeters vs, arguments 參數 vs. 引數
+# Paremeters vs, arguments (參數 vs. 引數)
 
 ## 兩者定義：
 
