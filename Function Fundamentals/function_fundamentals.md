@@ -346,4 +346,13 @@ let result3 = pow(1, 100);
 console.log(result1); // 9
 console.log(result2); // 27
 console.log(result3); // 1
+
+// Using Math.pow()
+function pow(x, n) {
+  console.log(Math.pow(x, n));
+}
+
+pow(3, 2); // 9
+pow(3, 3); // 27
+pow(1, 100); // 1
 ```
