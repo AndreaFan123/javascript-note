@@ -80,6 +80,7 @@ console.log(father[fruit]); // 這邊的 fruit 會根據輸入的值來決定
 ```
 
 > **Note**
+>
 > 如果屬性是簡單已知的狀況下，使用 `dot notation` 即可。
 
 ---
@@ -188,7 +189,8 @@ for (f in food) {
 // fish, apple, banana
 ```
 
-> **Note** > `Interger property` (整數屬性)，是指當作為字串的數字，轉換成數字後再轉換回字串，依舊是相等的。例如：
+> **Note**  
+> `Interger property` (整數屬性)，是指當作為字串的數字，轉換成數字後再轉換回字串，依舊是相等的。例如：
 >
 > `"49"` 轉換成整數後再轉換成字串依舊是 `49`
 >
@@ -257,6 +259,7 @@ console.log(result2); // It's not an empty object // true
 ```
 
 > **Note**
+>
 > 這邊的函式名稱為 `isEmpty`:
 >
 > 若結果為 `false != isEmpty`。
