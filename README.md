@@ -1,8 +1,7 @@
 # Learning Note
 
-Notes that I review some of important topics from javascript.info.
-
-I will list out more resouses if any,
+Here are some of the important topics regardling JavaScript.
+I will add more resources if any.
 
 ## 資源
 
