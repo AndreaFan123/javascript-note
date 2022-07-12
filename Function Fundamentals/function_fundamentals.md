@@ -230,6 +230,8 @@ function checkAge(age) {
 
 ### SOLUTION :
 
+這兩個函式執行起來是一樣的，只要 `if` 的結果是 `falsy`，就會執行 `Did parents allow you` 這段函式。
+
 ---
 
 ## Task 2 : Rewrite the function using '?' or '||'
@@ -255,6 +257,24 @@ Make two variants of checkAge:
 
 ### SOLUTION :
 
+```javascript
+// Using ?
+function checkAge(age) {
+  return age > 18 ? true : confirm("Did parents allow you?");
+}
+
+const result = checkAge(19);
+console.log(result);
+
+// Using ||
+function checkAge(age) {
+  return age > 18 || confirm("Did parents allow you?");
+}
+
+const result = checkAge(1);
+console.log(result);
+```
+
 ---
 
 ## Task 3 : Function min(a, b)
@@ -268,6 +288,29 @@ min(1, 1) == 1;
 ```
 
 ### SOLUTION :
+
+```javascript
+function min(a, b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+let result1 = min(2, 5);
+let result2 = min(3, -1);
+let result3 = min(1, 1);
+
+console.log(result1);
+console.log(result2);
+console.log(result3);
+
+// Ternary operator
+function min(a, b) {
+  return a < b ? a : b;
+}
+```
 
 ---
 
@@ -286,3 +329,21 @@ Create a web-page that prompts for x and n, and then shows the result of pow(x,n
 > P.S. In this task the function should support only natural values of n: integers up from 1.
 
 ### SOLUTION :
+
+```javascript
+function pow(x, n = 1) {
+  let result = x;
+  for (let i = 1; i < n; i++) {
+    result *= x;
+  }
+  return result;
+}
+
+let result1 = pow(3, 2);
+let result2 = pow(3, 3);
+let result3 = pow(1, 100);
+
+console.log(result1); // 9
+console.log(result2); // 27
+console.log(result3); // 1
+```
