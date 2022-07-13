@@ -137,18 +137,19 @@ let user = {
   name: "John",
   sizes: {
     height: 182,
-    width: 50
-  }
+    width: 50,
+  },
 };
 
-let clone ={...user};
+let clone = { ...user };
 clone.name = "Pete";
 clone.sizes.width = 40; // 進入第二層物件修改 width 的值
 
 console.log(user);
 //{ name: 'John', sizes: { height: 182, width: 40 } }
+
 console.log(clone);
-{ name: 'Pete', sizes: { height: 182, width: 40 } }
+// { name: 'Pete', sizes: { height: 182, width: 40 } }
 ```
 
 - 如何真正地達到深拷貝呢？
