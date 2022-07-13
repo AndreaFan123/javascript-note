@@ -133,7 +133,7 @@ console.log(clone === user); // true
 > 可以，但遇到這種巢狀的物件，基本上都還是淺拷貝(還是會影響屬性值)。
 
 ```javascript
-et user = {
+let user = {
   name: "John",
   sizes: {
     height: 182,
