@@ -284,6 +284,21 @@ Write the code to sum all salaries and store in the variable `sum`. Should be `3
 
 ### SOLUTION :
 
+```javascript
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+
+// define sum as 0
+let sum = 0;
+for (let prop in salaries) {
+  sum += salaries[prop];
+}
+console.log(sum); //390
+```
+
 ---
 
 ## Task 4: Multiply numeric property values by 2
@@ -313,3 +328,16 @@ menu = {
 > Please note that multiplyNumeric does not need to return anything. It should modify the object in-place. P.S. Use typeof to check for a number here.
 
 ### SOLUTION :
+
+```javascript
+function multiplyNumeric(obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number") {
+      obj[prop] *= 2;
+    }
+  }
+}
+
+multiplyNumeric(menu);
+console.log(menu);
+```

@@ -1,9 +1,9 @@
 # Learning Note
 
-Here are some of the important topics regardling JavaScript.
+Here are some of the important topics regarding JavaScript and the notes that I tried to document for future reviewing.
 I will add more resources if any.
 
-## 資源
+## Resourses
 
 ### Content : En
 
