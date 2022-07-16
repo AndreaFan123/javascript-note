@@ -108,6 +108,62 @@ let family = marry(
 
 delete family.father;
 delete family.mother.husband;
+
+console.log(family); // { mother: { name: 'Ann' }}
 ```
 
-上述刪除了子物件 `father ` 和 `husband`
+上述刪除了子物件 `father ` 和 物件 `mother` 內的屬性 `husband`，這裡表示 `Object John` 目前是 `unreachable`，被回收的狀態。
+
+如果僅刪除其中一個，我們依舊可以獲得資料，如下：
+
+- Case 1: 僅刪除 `family.father`，還是可以取得 `husband`
+
+```javascript
+delete family.father;
+
+console.log(family);
+/*{
+  mother:  {
+    name: 'Ann',
+    husband: { name: 'John', wife: {...} }
+  }
+}*/
+```
+
+- Case 2: 僅刪除 `family.mother.husband`，還是可以取得 `father` 的資料。
+
+```javascript
+delete family.mother.husband;
+
+console.log(family);
+
+/*
+{
+  father: { name: 'John', wife: { name: 'Ann' } },
+  mother: { name: 'Ann' }
+}
+*/
+```
+
+結論：
+
+> **Important**
+>
+> Outgoing references do not matter. Only incoming ones can make an object reachable.
+>
+> 傳出的 reference 不重要，只有傳入的 reference 才可以使物件具備可達性。
+
+若只刪除其中一個，依然有傳入的 reference，只有當刪除全部傳入的 references 時，才能消除物件的可達性。
+
+# Root is being null
+
+根物件若為 `null`，即使子物件相互關聯，也無法構成可達性。
+
+# Internal algorithm 內部演算法
+
+可參考 [Tracing garbage collection](https://en.wikipedia.org/wiki/Tracing_garbage_collection) 和 [MDN-記憶體管理](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Memory_Management) 來了解更細節。
+
+1. 垃圾回收的最基本演算法稱為：標記-清除 (mark-sweep)
+2. 從根部開始做標記並存入記憶體，一路遍歷所有的 `references` 標記並存入記憶體。
+3. 再遍歷所有的已標記的 `references` 底下的物件並標記其 `references` 直到沒有為止。
+4. 倘若有一個完全單獨的物件，是無法與其相互連接，那個這個單獨的物件就會被回收掉。
