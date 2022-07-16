@@ -1,5 +1,10 @@
 ## Table of contents
 
+- [Garbage collection](#garbage-collection-垃圾回收)
+- [Interlinked objects](#interlinked-objects-物件的連接)
+- [Root is being null](#root-is-being-null)
+- [Internal algorithm](#internal-algorithm-內部演算法)
+
 # Garbage collection (垃圾回收)
 
 1. JS 中的主要的隨機存取記憶體的概念為 **Reachability**
