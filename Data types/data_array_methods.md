@@ -1,5 +1,8 @@
 ## Table of contents
 
+- [Array methods](#array-methods-陣列的相關用法)
+- [performance](#performance-方法之間的效能差異)
+
 # Array Methods 陣列的相關用法
 
 - 佇列(Queue)：先進先出( First in, first out, aka FIFO)、橫向概念，像排公車，隊伍中的第一個，會先進公車，這裏假設進去公車後，隊伍就少一個，而位置將會依據往前移動。
